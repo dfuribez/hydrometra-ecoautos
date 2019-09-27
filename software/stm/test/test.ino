@@ -10,8 +10,8 @@ uint16_t y;
 #define pwm_motor       PB1 // Pin PWM del motor - PWM
 #define hm_1            PA5
 #define hm_2            PA4
-#define hm_3            PA3
-#define hm_4            PA2
+#define hm_3            PA1
+#define hm_4            PA0
 
 #define test            PB3
 #define led             PC13
