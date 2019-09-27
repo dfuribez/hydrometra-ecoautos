@@ -61,11 +61,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  x = analogRead(PA7);
+  analogRead(PA7);
   delay(10);
   x = analogRead(PA7);
   delay(100);
-  y = analogRead(PA6);
+  analogRead(PA6);
   delay(10);
   y = analogRead(PA6);
 
