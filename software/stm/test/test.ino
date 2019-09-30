@@ -16,7 +16,7 @@ uint16_t y;
 #define test            PB3
 #define led             PC13
 
-HardwareTimer timer(3);
+HardwareTimer timer(1);
 
 void setup() {
   Serial.begin(115200);
@@ -32,6 +32,7 @@ void setup() {
 
   // PWMs
   pinMode(pwm_motor, PWM);
+  pwmWrite(pwm_motor, 0);
 
   // Entradas
   pinMode(hm_1, INPUT);
@@ -41,12 +42,15 @@ void setup() {
 
 
   // Interrupciones
+  /*
   attachInterrupt(digitalPinToInterrupt(hm_1), int_hm, CHANGE);
   attachInterrupt(digitalPinToInterrupt(hm_2), int_hm, CHANGE);
   attachInterrupt(digitalPinToInterrupt(hm_3), int_hm, CHANGE);
   attachInterrupt(digitalPinToInterrupt(hm_4), int_hm, CHANGE);
+  */
 
   // Timer
+  
   timer.pause();
   timer.setMode(TIMER_CH1, TIMER_OUTPUT_COMPARE);
   timer.setPeriod(1000000);
@@ -57,6 +61,7 @@ void setup() {
   Serial.println("Iniciabndo");
   digitalWrite(led, HIGH);
   digitalWrite(test, HIGH);
+  digitalWrite(reversa, HIGH);
 }
 
 void loop() {
@@ -76,15 +81,35 @@ void loop() {
   Serial.print(" y: ");
   Serial.println(y);
   */
-  
+
+  if (y > 3000) {
+    int y_prob = map(y, 3000, 4095, 19000, 65535);
+
+    if (y_prob > 65535) {
+      y_prob = 65535;
+    }
+    
+    pwmWrite(pwm_motor, y_prob);
+    digitalWrite(reversa, HIGH);
+    Serial.print("adelante, ");
+    Serial.print(y);
+    Serial.print(", ");
+    Serial.println(y_prob);
+  } else if (y < 2000) {
+    pwmWrite(pwm_motor, map(y, 0, 2000, 19000, 65535));
+    digitalWrite(reversa, LOW);
+    Serial.println("Reversa"); 
+  } else {
+    pwmWrite(pwm_motor, 0);
+  }
   
   if (flag_hm) {
     Serial.println("Hombre Muerto");
     flag_hm = 0;
   } // end-if flag hombre muerto
-
+ 
   if (flag_timer) {
-    Serial.println("timerrrrr");
+    //Serial.println("timerrrrr");
     digitalWrite(test, !digitalRead(test));
     digitalWrite(led, !digitalRead(led));
 
