@@ -76,7 +76,7 @@ AR Path="/5D989311/5D8B0DD5" Ref="Y?"  Part="1"
 AR Path="/5D8ABBE4/5D8B0DD5" Ref="Y2"  Part="1" 
 F 0 "Y2" H 1300 6318 50  0000 C CNN
 F 1 "LoRa" H 1300 6227 50  0000 C CNN
-F 2 "Crystal:Crystal_HC49-4H_Vertical" H 1300 6050 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD" H 1300 6050 50  0001 C CNN
 F 3 "~" H 1300 6050 50  0001 C CNN
 	1    1300 6050
 	-1   0    0    1   
