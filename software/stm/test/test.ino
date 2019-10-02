@@ -1,7 +1,10 @@
 bool flag_hm = 0;
 bool flag_timer = 0;
-uint16_t x;
-uint16_t y;
+uint16_t x = 0;
+uint16_t y = 0;
+uint16_t y_prob = 0;
+uint8_t time_counter = 0;
+
 
 
 #define reversa         PB5 // Pin para la reversa
@@ -16,11 +19,16 @@ uint16_t y;
 #define test            PB3
 #define led             PC13
 
+
+#define dead_man_seconds    3
+
 HardwareTimer timer(1);
 
 void setup() {
-  Serial.begin(115200);
-
+  Serial.begin(115200);  // Debug
+  Serial1.begin(115200);  // Comunicaciones
+  Serial2.begin(115200);  // LCD
+  
   // Conversiones análogas
   pinMode(analogo_x, INPUT_ANALOG);
   pinMode(analogo_y, INPUT_ANALOG);
@@ -56,7 +64,7 @@ void setup() {
   timer.setPeriod(1000000);
   timer.attachCompare1Interrupt(reloj);
   timer.refresh();  // Resetea el timer
-  timer.resume();  // Inicia el timer
+  //timer.resume();  // Inicia el timer
   
   Serial.println("Iniciabndo");
   digitalWrite(led, HIGH);
@@ -66,24 +74,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  analogRead(PA7);
+  analogRead(analogo_x);
   delay(10);
-  x = analogRead(PA7);
+  x = analogRead(analogo_x);
   delay(100);
-  analogRead(PA6);
+  analogRead(analogo_y);
   delay(10);
-  y = analogRead(PA6);
+  y = analogRead(analogo_y);
 
-  /*
-  Serial.println(x + y);
-  Serial.print("x: ");
-  Serial.print(x);
-  Serial.print(" y: ");
-  Serial.println(y);
-  */
-
-  if (y > 3000) {
-    int y_prob = map(y, 3000, 4095, 19000, 65535);
+  if (y > 2090) {
+    y_prob = map(y, 2090, 4095, 19000, 65535);
 
     if (y_prob > 65535) {
       y_prob = 65535;
@@ -95,10 +95,19 @@ void loop() {
     Serial.print(y);
     Serial.print(", ");
     Serial.println(y_prob);
-  } else if (y < 2000) {
-    pwmWrite(pwm_motor, map(y, 0, 2000, 19000, 65535));
+  } else if (y < 2050) {
+    y_prob = map(y, 0, 2050, 65535, 19000);
+
+    if (y_prob > 65535) {
+      y_prob = 65535;
+    }
+    
+    pwmWrite(pwm_motor, y_prob);
     digitalWrite(reversa, LOW);
-    Serial.println("Reversa"); 
+    Serial.print("Reversa, "); 
+    Serial.print(y);
+    Serial.print(", ");
+    Serial.println(y_prob);
   } else {
     pwmWrite(pwm_motor, 0);
   }
@@ -119,6 +128,11 @@ void loop() {
     timer.resume();
     
   } // end-if flag timer
+
+  if (time_counter >= dead_man_seconds) {
+    
+  }
+  
 }
 
 /* rutinas interrupciones */
