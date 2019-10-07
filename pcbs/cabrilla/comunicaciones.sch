@@ -34,9 +34,9 @@ Wire Wire Line
 Wire Wire Line
 	4800 4250 5100 4250
 Text Label 5100 4150 2    50   ~ 0
-tx_lora
-Text Label 5100 4250 2    50   ~ 0
 rx_lora
+Text Label 5100 4250 2    50   ~ 0
+tx_lora
 Connection ~ 4250 5300
 Wire Wire Line
 	4250 5300 4300 5300
@@ -76,7 +76,7 @@ AR Path="/5D989311/5D8B0DD5" Ref="Y?"  Part="1"
 AR Path="/5D8ABBE4/5D8B0DD5" Ref="Y2"  Part="1" 
 F 0 "Y2" H 1300 6318 50  0000 C CNN
 F 1 "LoRa" H 1300 6227 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_HC49-SD" H 1300 6050 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD_HandSoldering" H 1300 6050 50  0001 C CNN
 F 3 "~" H 1300 6050 50  0001 C CNN
 	1    1300 6050
 	-1   0    0    1   
@@ -138,9 +138,9 @@ F 3 "" H 1300 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text HLabel 5100 4150 2    50   Input ~ 0
-tx_lora
-Text HLabel 5100 4250 2    50   Input ~ 0
 rx_lora
+Text HLabel 5100 4250 2    50   Input ~ 0
+tx_lora
 Text Label 1450 5900 1    50   ~ 0
 osc_2
 Text Label 1150 5900 1    50   ~ 0
@@ -203,8 +203,6 @@ F 3 "" H 8650 1600 50  0001 C CNN
 	1    8650 2700
 	1    0    0    -1  
 $EndComp
-Text Notes 5100 4100 0    50   ~ 0
-rx, tx con respecto al STM32\n
 Wire Wire Line
 	4800 2950 5150 2950
 Wire Wire Line
@@ -322,4 +320,19 @@ F 3 "" H 2250 2450 50  0001 C CNN
 	1    2250 2450
 	1    0    0    -1  
 $EndComp
+NoConn ~ 4800 2750
+NoConn ~ 4800 2850
+NoConn ~ 3600 3350
+NoConn ~ 4800 3450
+NoConn ~ 4800 3550
+NoConn ~ 4800 3650
+NoConn ~ 4800 3750
+NoConn ~ 4800 3850
+NoConn ~ 4800 3950
+NoConn ~ 4800 4350
+NoConn ~ 4800 4450
+NoConn ~ 4800 4550
+NoConn ~ 4800 4650
+NoConn ~ 4800 4750
+NoConn ~ 4800 4850
 $EndSCHEMATC
