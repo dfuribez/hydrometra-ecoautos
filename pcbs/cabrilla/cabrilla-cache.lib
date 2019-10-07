@@ -517,11 +517,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# elementos_STM32
+# cabrilla-rescue_STM32-elementos
 #
-DEF elementos_STM32 U 0 40 Y Y 1 F N
+DEF cabrilla-rescue_STM32-elementos U 0 40 Y Y 1 F N
 F0 "U" 1050 -2050 50 H V C CNN
-F1 "elementos_STM32" 1050 150 50 H V C CNN
+F1 "cabrilla-rescue_STM32-elementos" 1050 150 50 H V C CNN
 F2 "" 50 350 50 H I C CNN
 F3 "" 50 350 50 H I C CNN
 DRAW
@@ -569,11 +569,11 @@ X PA12/RTS1 9 0 -800 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# elementos_lorabee
+# cabrilla-rescue_lorabee-elementos
 #
-DEF elementos_lorabee U 0 40 Y Y 1 F N
+DEF cabrilla-rescue_lorabee-elementos U 0 40 Y Y 1 F N
 F0 "U" 0 -1100 50 H V C CNN
-F1 "elementos_lorabee" 0 200 50 H V C CNN
+F1 "cabrilla-rescue_lorabee-elementos" 0 200 50 H V C CNN
 F2 "" 0 -1100 50 H I C CNN
 F3 "" 0 -1100 50 H I C CNN
 DRAW

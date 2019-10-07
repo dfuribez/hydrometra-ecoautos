@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:cabrilla-cache
-EELAYER 30 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -75,7 +75,7 @@ U 1 1 5D7F1F69
 P 6800 1050
 F 0 "C1" H 6918 1096 50  0000 L CNN
 F 1 "100uF" H 6918 1005 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_8x6.2" H 6838 900 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 6838 900 50  0001 C CNN
 F 3 "~" H 6800 1050 50  0001 C CNN
 	1    6800 1050
 	1    0    0    -1  
@@ -677,7 +677,7 @@ F 3 "" H 3850 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L elementos:STM32 U2
+L cabrilla-rescue:STM32-elementos U2
 U 1 1 5D8CD4DA
 P 3750 1900
 F 0 "U2" H 4775 2165 50  0000 C CNN
@@ -1078,7 +1078,7 @@ U 1 1 5D9E8CB5
 P 7150 2650
 F 0 "C8" H 7268 2696 50  0000 L CNN
 F 1 "100uF" H 7268 2605 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_8x6.2" H 7188 2500 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 7188 2500 50  0001 C CNN
 F 3 "~" H 7150 2650 50  0001 C CNN
 	1    7150 2650
 	1    0    0    -1  
@@ -1291,7 +1291,7 @@ U 1 1 5D9C90DB
 P 6650 900
 F 0 "F1" V 6453 900 50  0000 C CNN
 F 1 "1A" V 6544 900 50  0000 C CNN
-F 2 "Fuse:Fuse_2816_7142Metric_Pad3.20x4.45mm_HandSolder" V 6580 900 50  0001 C CNN
+F 2 "Fuse:Fuse_0201_0603Metric" V 6580 900 50  0001 C CNN
 F 3 "~" H 6650 900 50  0001 C CNN
 	1    6650 900 
 	0    1    1    0   
