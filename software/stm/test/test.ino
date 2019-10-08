@@ -2,8 +2,15 @@ bool flag_hm = 0;
 bool flag_timer = 0;
 uint16_t x = 0;
 uint16_t y = 0;
+
+uint16_t x_prev = 0;
+uint16_t y_prev = 0;
+
+
 uint16_t y_prob = 0;
 uint8_t time_counter = 0;
+
+uint32_t j = 0;
 
 
 
@@ -80,21 +87,42 @@ void loop() {
   delay(100);
   analogRead(analogo_y);
   delay(10);
+  
   y = analogRead(analogo_y);
 
   if (y > 2090) {
+
+    y_prev = y_prob;
     y_prob = map(y, 2090, 4095, 19000, 65535);
 
     if (y_prob > 65535) {
       y_prob = 65535;
     }
-    
-    pwmWrite(pwm_motor, y_prob);
+
     digitalWrite(reversa, HIGH);
     Serial.print("adelante, ");
     Serial.print(y);
     Serial.print(", ");
     Serial.println(y_prob);
+
+
+    if (y_prev < y_prob - 2000) {
+      // lanza la curva
+      if (y_prob > 29789) {  // 29789 -> 1.5V
+        //for (uint16_t j=19000; j<=y_prob; j=j+2000) {
+        j = 19000;
+        while (j < y_prob) {
+          pwmWrite(pwm_motor, j);
+          Serial.println(j);
+          delay(100);
+          j = j + 2000;
+        }
+      }
+    }
+    
+    
+    pwmWrite(pwm_motor, y_prob);
+
   } else if (y < 2050) {
     y_prob = map(y, 0, 2050, 65535, 19000);
 
