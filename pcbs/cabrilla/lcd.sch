@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:cabrilla-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -30,20 +30,20 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5D8D4EE8
-P 6350 5200
+P 6350 5250
 AR Path="/5D8D4EE8" Ref="#PWR?"  Part="1" 
 AR Path="/5D8CC6A3/5D8D4EE8" Ref="#PWR019"  Part="1" 
-F 0 "#PWR019" H 6350 4950 50  0001 C CNN
-F 1 "GND" H 6355 5027 50  0000 C CNN
-F 2 "" H 6350 5200 50  0001 C CNN
-F 3 "" H 6350 5200 50  0001 C CNN
-	1    6350 5200
+F 0 "#PWR019" H 6350 5000 50  0001 C CNN
+F 1 "GND" H 6355 5077 50  0000 C CNN
+F 2 "" H 6350 5250 50  0001 C CNN
+F 3 "" H 6350 5250 50  0001 C CNN
+	1    6350 5250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6400 5200 6400 5150
 Wire Wire Line
-	6300 5200 6400 5200
+	6300 5200 6350 5200
 Text Label 7150 4050 2    50   ~ 0
 rx_lcd
 Text Label 7150 4150 2    50   ~ 0
@@ -194,25 +194,14 @@ osc_1
 Text Label 5700 3050 2    50   ~ 0
 osc_2
 $Comp
-L Connector_Generic:Conn_01x08 J7
+L Connector_Generic:Conn_01x08 lcd_digital2
 U 1 1 5D8BEC29
-P 800 1150
-F 0 "J7" H 718 525 50  0000 C CNN
-F 1 "Conn_01x08" H 718 616 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 800 1150 50  0001 C CNN
-F 3 "~" H 800 1150 50  0001 C CNN
-	1    800  1150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x06 J8
-U 1 1 5D8C0CBE
-P 800 2100
-F 0 "J8" H 718 1575 50  0000 C CNN
-F 1 "Conn_01x06" H 718 1666 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 800 2100 50  0001 C CNN
-F 3 "~" H 800 2100 50  0001 C CNN
-	1    800  2100
+P 900 1550
+F 0 "lcd_digital2" H 818 925 50  0000 C CNN
+F 1 "Conn_01x08" H 818 1016 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 900 1550 50  0001 C CNN
+F 3 "~" H 900 1550 50  0001 C CNN
+	1    900  1550
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -220,21 +209,10 @@ L Connector_Generic:Conn_01x08 J9
 U 1 1 5D8C1CF3
 P 800 3100
 F 0 "J9" H 718 2475 50  0000 C CNN
-F 1 "Conn_01x08" H 718 2566 50  0000 C CNN
+F 1 "lcd_digital1" H 718 2566 50  0000 C CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 800 3100 50  0001 C CNN
 F 3 "~" H 800 3100 50  0001 C CNN
 	1    800  3100
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x10 J10
-U 1 1 5D8C21ED
-P 800 4250
-F 0 "J10" H 718 3525 50  0000 C CNN
-F 1 "Conn_01x10" H 718 3616 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-10A_1x10_P2.54mm_Vertical" H 800 4250 50  0001 C CNN
-F 3 "~" H 800 4250 50  0001 C CNN
-	1    800  4250
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -245,7 +223,7 @@ AR Path="/5D8ABBE4/5D92708E" Ref="SW?"  Part="1"
 AR Path="/5D8CC6A3/5D92708E" Ref="SW2"  Part="1" 
 F 0 "SW2" V 5054 2998 50  0000 L CNN
 F 1 "SW_Push" V 5145 2998 50  0000 L CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 5100 3050 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KSC6xxJ" H 5100 3050 50  0001 C CNN
 F 3 "~" H 5100 3050 50  0001 C CNN
 	1    5100 2850
 	0    1    1    0   
@@ -292,27 +270,7 @@ F 3 "" H 5100 2350 50  0001 C CNN
 	1    5100 2350
 	1    0    0    -1  
 $EndComp
-Text Label 1150 2300 0    50   ~ 0
-RD
-Text Label 1150 2000 0    50   ~ 0
-CS
-Text Label 1150 2200 0    50   ~ 0
-WR
-Text Label 1150 2100 0    50   ~ 0
-RS
-Text Label 1150 1900 0    50   ~ 0
-RST
-Wire Wire Line
-	1150 2300 1000 2300
-Wire Wire Line
-	1150 2200 1000 2200
-Wire Wire Line
-	1150 2100 1000 2100
-Wire Wire Line
-	1150 2000 1000 2000
-Wire Wire Line
-	1150 1900 1000 1900
-NoConn ~ 1000 1800
+NoConn ~ 3600 1500
 Text Label 7050 3350 0    50   ~ 0
 RD
 Text Label 7050 3650 0    50   ~ 0
@@ -334,4 +292,208 @@ Wire Wire Line
 Wire Wire Line
 	7050 3750 6900 3750
 NoConn ~ 6900 3850
+NoConn ~ 1000 3400
+NoConn ~ 1000 3300
+Text Label 1200 3200 0    50   ~ 0
+D2
+Text Label 1200 3100 0    50   ~ 0
+D3
+Text Label 1200 3000 0    50   ~ 0
+D4
+Text Label 1200 2900 0    50   ~ 0
+D5
+Text Label 1200 2800 0    50   ~ 0
+D6
+Text Label 1200 2700 0    50   ~ 0
+D7
+Wire Wire Line
+	1200 2800 1000 2800
+Wire Wire Line
+	1200 2900 1000 2900
+Wire Wire Line
+	1200 3000 1000 3000
+Wire Wire Line
+	1200 3100 1000 3100
+Wire Wire Line
+	1200 3200 1000 3200
+Wire Wire Line
+	1000 2700 1200 2700
+Text Label 7050 4250 0    50   ~ 0
+D2
+Text Label 7050 4350 0    50   ~ 0
+D3
+Text Label 7050 4450 0    50   ~ 0
+D4
+Text Label 7050 4550 0    50   ~ 0
+D5
+Text Label 7050 4650 0    50   ~ 0
+D6
+Text Label 7050 4750 0    50   ~ 0
+D7
+Wire Wire Line
+	7050 4250 6900 4250
+Wire Wire Line
+	7050 4350 6900 4350
+Wire Wire Line
+	7050 4450 6900 4450
+Wire Wire Line
+	6900 4550 7050 4550
+Wire Wire Line
+	7050 4650 6900 4650
+Wire Wire Line
+	7050 4750 6900 4750
+Text Label 7050 2650 0    50   ~ 0
+D0
+Text Label 7050 2750 0    50   ~ 0
+D1
+Text Label 7050 2850 0    50   ~ 0
+SS
+Text Label 7050 2950 0    50   ~ 0
+DI
+Text Label 7050 3050 0    50   ~ 0
+DO
+Text Label 7050 3150 0    50   ~ 0
+SCK
+Wire Wire Line
+	7050 2650 6900 2650
+Wire Wire Line
+	7050 2750 6900 2750
+Wire Wire Line
+	7050 2850 6900 2850
+Wire Wire Line
+	7050 2950 6900 2950
+Wire Wire Line
+	7050 3050 6900 3050
+Wire Wire Line
+	6900 3150 7050 3150
+Text Label 1250 1150 0    50   ~ 0
+D0
+Text Label 1250 1250 0    50   ~ 0
+D1
+Text Label 1250 1350 0    50   ~ 0
+SS
+Text Label 1250 1450 0    50   ~ 0
+DI
+Text Label 1250 1550 0    50   ~ 0
+DO
+Text Label 1250 1650 0    50   ~ 0
+SCK
+Wire Wire Line
+	1250 1150 1100 1150
+Wire Wire Line
+	1250 1250 1100 1250
+Wire Wire Line
+	1250 1350 1100 1350
+Wire Wire Line
+	1250 1450 1100 1450
+Wire Wire Line
+	1250 1550 1100 1550
+Wire Wire Line
+	1250 1650 1100 1650
+NoConn ~ 1100 1750
+NoConn ~ 1100 1850
+$Comp
+L Connector_Generic:Conn_01x08 lcd_power1
+U 1 1 5DA309E8
+P 800 4300
+F 0 "lcd_power1" H 718 3675 50  0000 C CNN
+F 1 "lcd_power" H 718 3766 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 800 4300 50  0001 C CNN
+F 3 "~" H 800 4300 50  0001 C CNN
+	1    800  4300
+	-1   0    0    1   
+$EndComp
+NoConn ~ 1000 4600
+NoConn ~ 1000 4500
+Wire Wire Line
+	1200 4000 1000 4000
+Wire Wire Line
+	1200 4100 1000 4100
+$Comp
+L power:GND #PWR0129
+U 1 1 5DA32207
+P 1450 4050
+F 0 "#PWR0129" H 1450 3800 50  0001 C CNN
+F 1 "GND" H 1455 3877 50  0000 C CNN
+F 2 "" H 1450 4050 50  0001 C CNN
+F 3 "" H 1450 4050 50  0001 C CNN
+	1    1450 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 4000 1200 4050
+Wire Wire Line
+	1200 4050 1450 4050
+Connection ~ 1200 4050
+Wire Wire Line
+	1200 4050 1200 4100
+NoConn ~ 1000 3900
+$Comp
+L power:+5V #PWR0130
+U 1 1 5DA387EA
+P 1300 4200
+F 0 "#PWR0130" H 1300 4050 50  0001 C CNN
+F 1 "+5V" H 1315 4373 50  0000 C CNN
+F 2 "" H 1300 4200 50  0001 C CNN
+F 3 "" H 1300 4200 50  0001 C CNN
+	1    1300 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0131
+U 1 1 5DA38D62
+P 1750 4400
+F 0 "#PWR0131" H 1750 4250 50  0001 C CNN
+F 1 "+3V3" H 1765 4573 50  0000 C CNN
+F 2 "" H 1750 4400 50  0001 C CNN
+F 3 "" H 1750 4400 50  0001 C CNN
+	1    1750 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 4400 1350 4400
+Wire Wire Line
+	1350 4400 1350 4300
+Wire Wire Line
+	1000 4300 1350 4300
+Wire Wire Line
+	1000 4200 1300 4200
+NoConn ~ 1000 4400
+Wire Wire Line
+	3450 1400 3600 1400
+Wire Wire Line
+	3450 1300 3600 1300
+Wire Wire Line
+	3450 1200 3600 1200
+Wire Wire Line
+	3450 1100 3600 1100
+Wire Wire Line
+	3450 1000 3600 1000
+Text Label 3450 1000 0    50   ~ 0
+RST
+Text Label 3450 1200 0    50   ~ 0
+RS
+Text Label 3450 1300 0    50   ~ 0
+WR
+Text Label 3450 1100 0    50   ~ 0
+CS
+Text Label 3450 1400 0    50   ~ 0
+RD
+$Comp
+L Connector_Generic:Conn_01x06 lcd_analog1
+U 1 1 5D8C0CBE
+P 3800 1200
+F 0 "lcd_analog1" H 3718 675 50  0000 C CNN
+F 1 "Conn_01x06" H 3718 766 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 3800 1200 50  0001 C CNN
+F 3 "~" H 3800 1200 50  0001 C CNN
+	1    3800 1200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5700 3250
+Wire Wire Line
+	6350 5250 6350 5200
+Connection ~ 6350 5200
+Wire Wire Line
+	6350 5200 6400 5200
 $EndSCHEMATC

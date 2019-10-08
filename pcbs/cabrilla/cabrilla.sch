@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:cabrilla-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -85,81 +85,55 @@ Wire Wire Line
 $Comp
 L Device:R R3
 U 1 1 5D863A74
-P 10550 900
-F 0 "R3" V 10665 900 50  0000 C CNN
-F 1 "10k" V 10550 900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10480 900 50  0001 C CNN
-F 3 "~" H 10550 900 50  0001 C CNN
-	1    10550 900 
+P 10450 750
+F 0 "R3" V 10565 750 50  0000 C CNN
+F 1 "10k" V 10450 750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10380 750 50  0001 C CNN
+F 3 "~" H 10450 750 50  0001 C CNN
+	1    10450 750 
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5D866437
-P 10550 1100
-F 0 "R4" V 10665 1100 50  0000 C CNN
-F 1 "10k" V 10550 1100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10480 1100 50  0001 C CNN
-F 3 "~" H 10550 1100 50  0001 C CNN
-	1    10550 1100
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5D868152
-P 10550 1300
-F 0 "R5" V 10550 1300 50  0000 C CNN
-F 1 "10k" V 10650 1300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10480 1300 50  0001 C CNN
-F 3 "~" H 10550 1300 50  0001 C CNN
-	1    10550 1300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5D868A34
-P 10550 1500
-F 0 "R6" V 10550 1500 50  0000 C CNN
-F 1 "10k" V 10650 1500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10480 1500 50  0001 C CNN
-F 3 "~" H 10550 1500 50  0001 C CNN
-	1    10550 1500
+P 10450 950
+F 0 "R4" V 10565 950 50  0000 C CNN
+F 1 "10k" V 10450 950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10380 950 50  0001 C CNN
+F 3 "~" H 10450 950 50  0001 C CNN
+	1    10450 950 
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R7
 U 1 1 5D8697A6
-P 10550 1700
-F 0 "R7" V 10550 1700 50  0000 C CNN
-F 1 "10k" V 10650 1700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10480 1700 50  0001 C CNN
-F 3 "~" H 10550 1700 50  0001 C CNN
-	1    10550 1700
+P 10450 1500
+F 0 "R7" V 10450 1500 50  0000 C CNN
+F 1 "10k" V 10550 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10380 1500 50  0001 C CNN
+F 3 "~" H 10450 1500 50  0001 C CNN
+	1    10450 1500
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R8
 U 1 1 5D86AAD5
-P 10550 1900
-F 0 "R8" V 10550 1900 50  0000 C CNN
-F 1 "10k" V 10650 1900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10480 1900 50  0001 C CNN
-F 3 "~" H 10550 1900 50  0001 C CNN
-	1    10550 1900
+P 10450 1700
+F 0 "R8" V 10450 1700 50  0000 C CNN
+F 1 "10k" V 10550 1700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10380 1700 50  0001 C CNN
+F 3 "~" H 10450 1700 50  0001 C CNN
+	1    10450 1700
 	0    1    1    0   
 $EndComp
-Text Label 10700 900  0    50   ~ 0
+Text Label 10700 750  0    50   ~ 0
 led_m1
-Text Label 10700 1100 0    50   ~ 0
+Text Label 10700 950  0    50   ~ 0
 led_m2
-Text Label 10700 1300 0    50   ~ 0
-led_m3
 Text Label 10700 1500 0    50   ~ 0
-led_m4
+led_m3
 Text Label 10700 1700 0    50   ~ 0
-led_m5
-Text Label 10700 1900 0    50   ~ 0
-led_m6
+led_m4
 $Comp
 L Device:R R9
 U 1 1 5D8396E8
@@ -174,10 +148,10 @@ $EndComp
 Wire Wire Line
 	800  1950 1000 1950
 $Comp
-L Connector:Conn_01x02_Male J2
+L Connector:Conn_01x02_Male hm1
 U 1 1 5D83B43E
 P 600 1850
-F 0 "J2" H 708 2031 50  0000 C CNN
+F 0 "hm1" H 708 2031 50  0000 C CNN
 F 1 "hm_1" H 708 1940 50  0000 C CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 600 1850 50  0001 C CNN
 F 3 "~" H 600 1850 50  0001 C CNN
@@ -212,10 +186,10 @@ $EndComp
 Wire Wire Line
 	800  2850 1000 2850
 $Comp
-L Connector:Conn_01x02_Male J3
+L Connector:Conn_01x02_Male hm2
 U 1 1 5D8408AE
 P 600 2750
-F 0 "J3" H 708 2931 50  0000 C CNN
+F 0 "hm2" H 708 2931 50  0000 C CNN
 F 1 "hm_2" H 708 2840 50  0000 C CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 600 2750 50  0001 C CNN
 F 3 "~" H 600 2750 50  0001 C CNN
@@ -250,10 +224,10 @@ $EndComp
 Wire Wire Line
 	800  3800 1000 3800
 $Comp
-L Connector:Conn_01x02_Male J4
+L Connector:Conn_01x02_Male hm3
 U 1 1 5D841843
 P 600 3700
-F 0 "J4" H 708 3881 50  0000 C CNN
+F 0 "hm3" H 708 3881 50  0000 C CNN
 F 1 "hm_3" H 708 3790 50  0000 C CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 600 3700 50  0001 C CNN
 F 3 "~" H 600 3700 50  0001 C CNN
@@ -288,10 +262,10 @@ $EndComp
 Wire Wire Line
 	800  4750 1000 4750
 $Comp
-L Connector:Conn_01x02_Male J5
+L Connector:Conn_01x02_Male hm4
 U 1 1 5D842AB3
 P 600 4650
-F 0 "J5" H 708 4831 50  0000 C CNN
+F 0 "hm4" H 708 4831 50  0000 C CNN
 F 1 "hm_4" H 708 4740 50  0000 C CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 600 4650 50  0001 C CNN
 F 3 "~" H 600 4650 50  0001 C CNN
@@ -327,62 +301,10 @@ F 3 "" H 1050 6650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1050 6650 1000 6650
-Text Label 1050 6450 0    50   ~ 0
+Text Label 1050 6150 0    50   ~ 0
 corriente
-Text Label 1050 6350 0    50   ~ 0
+Text Label 1050 6450 0    50   ~ 0
 pwm_motor
-$Comp
-L Connector_Generic:Conn_01x12 J1
-U 1 1 5D8601A7
-P 10050 1400
-F 0 "J1" H 9968 575 50  0000 C CNN
-F 1 "leds_velocidad" H 9968 666 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-12A_1x12_P2.54mm_Vertical" H 10050 1400 50  0001 C CNN
-F 3 "~" H 10050 1400 50  0001 C CNN
-	1    10050 1400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	10400 900  10250 900 
-Wire Wire Line
-	10400 1100 10250 1100
-Wire Wire Line
-	10400 1300 10250 1300
-Wire Wire Line
-	10400 1500 10250 1500
-Wire Wire Line
-	10400 1700 10250 1700
-Wire Wire Line
-	10400 1900 10250 1900
-Wire Wire Line
-	10250 800  11100 800 
-Wire Wire Line
-	11100 800  11100 1000
-Wire Wire Line
-	11100 1000 10250 1000
-Wire Wire Line
-	11100 1000 11100 1200
-Connection ~ 11100 1000
-Wire Wire Line
-	10250 1200 11100 1200
-Connection ~ 11100 1200
-Wire Wire Line
-	11100 1200 11100 1400
-Wire Wire Line
-	10250 1400 11100 1400
-Connection ~ 11100 1400
-Wire Wire Line
-	11100 1400 11100 1600
-Wire Wire Line
-	10250 1600 11100 1600
-Connection ~ 11100 1600
-Wire Wire Line
-	11100 1600 11100 1800
-Wire Wire Line
-	10250 1800 11100 1800
-Connection ~ 11100 1800
-Wire Wire Line
-	11100 1800 11100 2000
 $Comp
 L power:GND #PWR012
 U 1 1 5D871B3D
@@ -507,17 +429,6 @@ F 3 "" H 3200 750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR02
-U 1 1 5D8A014B
-P 3700 750
-F 0 "#PWR02" H 3700 600 50  0001 C CNN
-F 1 "+5V" H 3715 923 50  0000 C CNN
-F 2 "" H 3700 750 50  0001 C CNN
-F 3 "" H 3700 750 50  0001 C CNN
-	1    3700 750 
-	1    0    0    -1  
-$EndComp
-$Comp
 L Regulator_Linear:AZ1117-3.3 U1
 U 1 1 5D8A0A70
 P 4700 900
@@ -550,8 +461,6 @@ F 3 "~" H 5250 1050 50  0001 C CNN
 	1    5250 1050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 900  5000 900 
 Wire Wire Line
 	4400 900  4200 900 
 $Comp
@@ -662,22 +571,8 @@ Wire Wire Line
 Wire Wire Line
 	5450 900  5250 900 
 Connection ~ 5250 900 
-Wire Wire Line
-	3700 750  3850 750 
-Connection ~ 3700 750 
 $Comp
-L power:VCC #PWR03
-U 1 1 5D8BC97F
-P 3850 750
-F 0 "#PWR03" H 3850 600 50  0001 C CNN
-F 1 "VCC" V 3867 878 50  0000 L CNN
-F 2 "" H 3850 750 50  0001 C CNN
-F 3 "" H 3850 750 50  0001 C CNN
-	1    3850 750 
-	1    0    0    -1  
-$EndComp
-$Comp
-L cabrilla-rescue:STM32-elementos U2
+L cabrilla-rescue:STM32-elementos-cabrilla-rescue U2
 U 1 1 5D8CD4DA
 P 3750 1900
 F 0 "U2" H 4775 2165 50  0000 C CNN
@@ -697,13 +592,13 @@ Wire Wire Line
 	5800 3200 6450 3200
 Text Label 1050 6250 0    50   ~ 0
 reversa
-Text Label 1050 6150 0    50   ~ 0
+Text Label 1050 6350 0    50   ~ 0
 freno
 $Comp
-L Connector_Generic:Conn_01x05 J11
+L Connector_Generic:Conn_01x05 analogo1
 U 1 1 5D925E58
 P 2250 7000
-F 0 "J11" V 2214 6712 50  0000 R CNN
+F 0 "analogo1" V 2214 6712 50  0000 R CNN
 F 1 "Conn_analogo" V 2123 6712 50  0000 R CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 2250 7000 50  0001 C CNN
 F 3 "~" H 2250 7000 50  0001 C CNN
@@ -748,9 +643,9 @@ Wire Wire Line
 	2050 7250 1900 7250
 Wire Wire Line
 	1900 7250 1900 7300
-Text Label 2750 7400 2    50   ~ 0
-analog_x
 Text Label 2750 7300 2    50   ~ 0
+analog_x
+Text Label 2750 7400 2    50   ~ 0
 analog_y
 NoConn ~ 2450 7200
 $Comp
@@ -849,10 +744,10 @@ Text Label 8250 6000 0    50   ~ 0
 reversa_signal
 Wire Wire Line
 	8250 6000 8800 6000
-Text Label 3150 3100 0    50   ~ 0
+Text Label 3150 2800 0    50   ~ 0
 reversa_signal
 Wire Wire Line
-	3750 3100 3150 3100
+	3750 2800 3150 2800
 $Comp
 L power:VCC #PWR0106
 U 1 1 5D8E0599
@@ -938,18 +833,18 @@ F 3 "" H 10550 5050 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3750 2900 3300 2900
+	3750 3500 3300 3500
 Wire Wire Line
-	3750 2800 3300 2800
-Text Label 3300 2900 0    50   ~ 0
+	3750 3400 3300 3400
+Text Label 3300 3500 0    50   ~ 0
 hm_1
-Text Label 3300 2800 0    50   ~ 0
+Text Label 3300 3400 0    50   ~ 0
 hm_2
 Wire Wire Line
-	3750 2700 3300 2700
+	3750 3300 3300 3300
 Wire Wire Line
-	3750 2600 3300 2600
-Text Label 3300 2700 0    50   ~ 0
+	3750 3200 3300 3200
+Text Label 3300 3300 0    50   ~ 0
 hm_3
 Text Label 7350 2500 0    50   ~ 0
 pwm_motor
@@ -1047,12 +942,12 @@ Wire Wire Line
 $Comp
 L power:VCC #PWR0118
 U 1 1 5D9C4EF3
-P 1550 6550
-F 0 "#PWR0118" H 1550 6400 50  0001 C CNN
-F 1 "VCC" V 1567 6678 50  0000 L CNN
-F 2 "" H 1550 6550 50  0001 C CNN
-F 3 "" H 1550 6550 50  0001 C CNN
-	1    1550 6550
+P 1050 5950
+F 0 "#PWR0118" H 1050 5800 50  0001 C CNN
+F 1 "VCC" V 1067 6078 50  0000 L CNN
+F 2 "" H 1050 5950 50  0001 C CNN
+F 3 "" H 1050 5950 50  0001 C CNN
+	1    1050 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1278,8 +1173,8 @@ $EndComp
 Wire Wire Line
 	7650 5050 7650 4950
 Wire Wire Line
-	3750 3200 3150 3200
-Text Label 3150 3200 0    50   ~ 0
+	3750 2900 3150 2900
+Text Label 3150 2900 0    50   ~ 0
 freno_signal
 Wire Wire Line
 	5800 3000 6250 3000
@@ -1291,7 +1186,7 @@ U 1 1 5D9C90DB
 P 6650 900
 F 0 "F1" V 6453 900 50  0000 C CNN
 F 1 "1A" V 6544 900 50  0000 C CNN
-F 2 "Fuse:Fuse_0201_0603Metric" V 6580 900 50  0001 C CNN
+F 2 "Fuse:Fuse_2816_7142Metric_Pad3.20x4.45mm_HandSolder" V 6580 900 50  0001 C CNN
 F 3 "~" H 6650 900 50  0001 C CNN
 	1    6650 900 
 	0    1    1    0   
@@ -1322,7 +1217,7 @@ F 3 "~" H 800 6350 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1000 6550 1550 6550
+	1000 5950 1050 5950
 Wire Notes Line
 	550  5350 1300 5350
 Wire Notes Line
@@ -1330,18 +1225,7 @@ Wire Notes Line
 Wire Notes Line
 	550  1600 550  5350
 NoConn ~ 1000 6050
-NoConn ~ 1000 5950
-$Comp
-L Connector_Generic:Conn_01x05 J6
-U 1 1 5D9E44F4
-P 2350 6200
-F 0 "J6" V 2314 5912 50  0000 R CNN
-F 1 "Conn_analogo" V 2223 5912 50  0000 R CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 2350 6200 50  0001 C CNN
-F 3 "~" H 2350 6200 50  0001 C CNN
-	1    2350 6200
-	0    -1   -1   0   
-$EndComp
+NoConn ~ 1000 6550
 $Comp
 L power:GND #PWR0127
 U 1 1 5D9E44FA
@@ -1401,10 +1285,6 @@ Text Label 3650 2100 2    50   ~ 0
 led_m3
 Text Label 3650 2200 2    50   ~ 0
 led_m4
-Text Label 3650 3300 2    50   ~ 0
-led_m5
-Text Label 3650 3400 2    50   ~ 0
-led_m6
 Wire Wire Line
 	3750 1900 3650 1900
 Wire Wire Line
@@ -1413,10 +1293,6 @@ Wire Wire Line
 	3750 2100 3650 2100
 Wire Wire Line
 	3650 2200 3750 2200
-Wire Wire Line
-	3750 3300 3650 3300
-Wire Wire Line
-	3650 3400 3750 3400
 $Sheet
 S 2450 2350 550  550 
 U 5D8ABBE4
@@ -1425,11 +1301,9 @@ F1 "comunicaciones.sch" 50
 F2 "rx_lora" B R 3000 2400 50 
 F3 "tx_lora" B R 3000 2500 50 
 $EndSheet
-Text Label 3300 2600 0    50   ~ 0
+Text Label 3300 3200 0    50   ~ 0
 hm_4
-NoConn ~ 3750 2300
 NoConn ~ 3750 3000
-NoConn ~ 3750 3500
 NoConn ~ 5800 3700
 NoConn ~ 5800 3600
 NoConn ~ 5800 3500
@@ -1437,4 +1311,94 @@ NoConn ~ 5800 3400
 NoConn ~ 5800 3300
 NoConn ~ 5800 2400
 NoConn ~ 5800 2300
+$Comp
+L power:+5V #PWR02
+U 1 1 5D8A014B
+P 3700 750
+F 0 "#PWR02" H 3700 600 50  0001 C CNN
+F 1 "+5V" H 3715 923 50  0000 C CNN
+F 2 "" H 3700 750 50  0001 C CNN
+F 3 "" H 3700 750 50  0001 C CNN
+	1    3700 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 analogo2
+U 1 1 5D9E44F4
+P 2350 6200
+F 0 "analogo2" V 2314 5912 50  0000 R CNN
+F 1 "Conn_analogo" V 2223 5912 50  0000 R CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 2350 6200 50  0001 C CNN
+F 3 "~" H 2350 6200 50  0001 C CNN
+	1    2350 6200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 900  5000 900 
+Text Label 5950 2500 0    50   ~ 0
+raw_pwm
+$Comp
+L Connector_Generic:Conn_01x04 leds1
+U 1 1 5DB1FB27
+P 10000 950
+F 0 "leds1" H 9918 525 50  0000 C CNN
+F 1 "Conn_01x04" H 9918 616 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10000 950 50  0001 C CNN
+F 3 "~" H 10000 950 50  0001 C CNN
+	1    10000 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 leds2
+U 1 1 5DB2144C
+P 10000 1700
+F 0 "leds2" H 9918 1275 50  0000 C CNN
+F 1 "Conn_01x04" H 9918 1366 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 10000 1700 50  0001 C CNN
+F 3 "~" H 10000 1700 50  0001 C CNN
+	1    10000 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10200 750  10300 750 
+Wire Wire Line
+	10600 750  10700 750 
+Wire Wire Line
+	10200 950  10300 950 
+Wire Wire Line
+	10600 950  10700 950 
+Wire Wire Line
+	10700 1500 10600 1500
+Wire Wire Line
+	10300 1500 10200 1500
+Wire Wire Line
+	10300 1700 10200 1700
+Wire Wire Line
+	10600 1700 10700 1700
+Wire Wire Line
+	10200 850  11100 850 
+Wire Wire Line
+	10200 1600 11100 1600
+Connection ~ 11100 1600
+Wire Wire Line
+	10200 1800 10200 1850
+Wire Wire Line
+	10200 1850 11100 1850
+Wire Wire Line
+	11100 1600 11100 1850
+Connection ~ 11100 1850
+Wire Wire Line
+	11100 1850 11100 2000
+Wire Wire Line
+	11100 850  11100 1100
+Wire Wire Line
+	10200 1050 10200 1100
+Wire Wire Line
+	10200 1100 11100 1100
+Connection ~ 11100 1100
+Wire Wire Line
+	11100 1100 11100 1600
+NoConn ~ 3750 2300
+NoConn ~ 3750 2600
+NoConn ~ 3750 2700
 $EndSCHEMATC

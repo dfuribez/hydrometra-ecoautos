@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:cabrilla-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -193,7 +193,7 @@ F 3 "" H 4250 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L cabrilla-rescue:lorabee-elementos U3
+L cabrilla-rescue:lorabee-elementos-cabrilla-rescue U3
 U 1 1 5D8B69A5
 P 8650 2700
 F 0 "U3" H 8650 2965 50  0000 C CNN
@@ -279,7 +279,7 @@ U 1 1 5D92194B
 P 2250 2950
 F 0 "SW1" V 2204 3098 50  0000 L CNN
 F 1 "SW_Push" V 2295 3098 50  0000 L CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 2250 3150 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KSC6xxJ" H 2250 3150 50  0001 C CNN
 F 3 "~" H 2250 3150 50  0001 C CNN
 	1    2250 2950
 	0    1    1    0   
@@ -329,10 +329,24 @@ NoConn ~ 4800 3650
 NoConn ~ 4800 3750
 NoConn ~ 4800 3850
 NoConn ~ 4800 3950
-NoConn ~ 4800 4350
 NoConn ~ 4800 4450
 NoConn ~ 4800 4550
-NoConn ~ 4800 4650
 NoConn ~ 4800 4750
 NoConn ~ 4800 4850
+Text Label 4950 4350 0    50   ~ 0
+DIO0
+Wire Wire Line
+	4950 4350 4800 4350
+Wire Wire Line
+	9050 3500 9250 3500
+Text Label 9250 3500 2    50   ~ 0
+DIO0
+Text Label 5050 4650 2    50   ~ 0
+RESET
+Wire Wire Line
+	5050 4650 4800 4650
+Text Label 8000 3100 0    50   ~ 0
+RESET
+Wire Wire Line
+	8250 3100 8000 3100
 $EndSCHEMATC
