@@ -1205,17 +1205,6 @@ F 3 "" H 6800 900 50  0001 C CNN
 	1    6800 900 
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x08 J12
-U 1 1 5D9AC376
-P 800 6350
-F 0 "J12" H 718 5725 50  0000 C CNN
-F 1 "inputs" H 718 5816 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 800 6350 50  0001 C CNN
-F 3 "~" H 800 6350 50  0001 C CNN
-	1    800  6350
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	1000 5950 1050 5950
 Wire Notes Line
@@ -1224,8 +1213,6 @@ Wire Notes Line
 	1300 5350 1300 1600
 Wire Notes Line
 	550  1600 550  5350
-NoConn ~ 1000 6050
-NoConn ~ 1000 6550
 $Comp
 L power:GND #PWR0127
 U 1 1 5D9E44FA
@@ -1401,4 +1388,37 @@ Wire Wire Line
 NoConn ~ 3750 2300
 NoConn ~ 3750 2600
 NoConn ~ 3750 2700
+$Comp
+L Connector_Generic:Conn_01x08 J12
+U 1 1 5D9AC376
+P 800 6350
+F 0 "J12" H 718 5725 50  0000 C CNN
+F 1 "inputs" H 718 5816 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-08A_1x08_P2.54mm_Vertical" H 800 6350 50  0001 C CNN
+F 3 "~" H 800 6350 50  0001 C CNN
+	1    800  6350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1000 6550 1050 6550
+Wire Wire Line
+	1050 6550 1050 6650
+Connection ~ 1050 6650
+$Comp
+L power:GND #PWR?
+U 1 1 5D9DDC32
+P 1600 5850
+F 0 "#PWR?" H 1600 5600 50  0001 C CNN
+F 1 "GND" H 1605 5677 50  0000 C CNN
+F 2 "" H 1600 5850 50  0001 C CNN
+F 3 "" H 1600 5850 50  0001 C CNN
+	1    1600 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 6050 1400 6050
+Wire Wire Line
+	1400 6050 1400 5850
+Wire Wire Line
+	1400 5850 1600 5850
 $EndSCHEMATC
