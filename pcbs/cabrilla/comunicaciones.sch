@@ -150,38 +150,6 @@ osc_2
 Text Label 3600 2950 2    50   ~ 0
 osc_1
 $Comp
-L Connector:Conn_01x03_Male deb_com?
-U 1 1 5D8B0AA2
-P 2750 6200
-AR Path="/5D8B0AA2" Ref="deb_com?"  Part="1" 
-AR Path="/5D8ABBE4/5D8B0AA2" Ref="deb_com1"  Part="1" 
-F 0 "deb_com1" V 2812 6013 50  0000 R CNN
-F 1 "UART_lora" V 2903 6013 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2750 6200 50  0001 C CNN
-F 3 "~" H 2750 6200 50  0001 C CNN
-	1    2750 6200
-	0    1    1    0   
-$EndComp
-Text Label 2650 6400 3    50   ~ 0
-rx_lora
-Text Label 2750 6400 3    50   ~ 0
-tx_lora
-Wire Wire Line
-	2850 6400 2850 6500
-$Comp
-L power:GND #PWR?
-U 1 1 5D8B0AAB
-P 2850 6500
-AR Path="/5D8B0AAB" Ref="#PWR?"  Part="1" 
-AR Path="/5D8ABBE4/5D8B0AAB" Ref="#PWR026"  Part="1" 
-F 0 "#PWR026" H 2850 6250 50  0001 C CNN
-F 1 "GND" H 2855 6327 50  0000 C CNN
-F 2 "" H 2850 6500 50  0001 C CNN
-F 3 "" H 2850 6500 50  0001 C CNN
-	1    2850 6500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR022
 U 1 1 5D8AD624
 P 4250 2150
@@ -321,7 +289,6 @@ F 3 "" H 2250 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4800 2750
-NoConn ~ 4800 2850
 NoConn ~ 3600 3350
 NoConn ~ 4800 3450
 NoConn ~ 4800 3550
@@ -341,12 +308,15 @@ Wire Wire Line
 	9050 3500 9250 3500
 Text Label 9250 3500 2    50   ~ 0
 DIO0
-Text Label 5050 4650 2    50   ~ 0
+Text Label 5050 2850 2    50   ~ 0
 RESET
 Wire Wire Line
-	5050 4650 4800 4650
+	5050 2850 4800 2850
 Text Label 8000 3100 0    50   ~ 0
 RESET
 Wire Wire Line
 	8250 3100 8000 3100
+NoConn ~ 4800 4650
+Text Label 3050 2750 0    50   ~ 0
+arst
 $EndSCHEMATC

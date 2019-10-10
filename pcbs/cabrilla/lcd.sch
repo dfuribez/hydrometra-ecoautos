@@ -138,38 +138,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Microchip%208bit%20mcu%20AV
 	1    6300 3750
 	1    0    0    -1  
 $EndComp
-Text Label 2800 6650 3    50   ~ 0
-tx_lcd
-Text Label 2700 6650 3    50   ~ 0
-rx_lcd
-$Comp
-L Connector:Conn_01x03_Male deb_lcd?
-U 1 1 5D8D615F
-P 2800 6450
-AR Path="/5D8D615F" Ref="deb_lcd?"  Part="1" 
-AR Path="/5D8CC6A3/5D8D615F" Ref="deb_lcd1"  Part="1" 
-F 0 "deb_lcd1" V 2862 6594 50  0000 L CNN
-F 1 "UART_LCD" V 2953 6594 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2800 6450 50  0001 C CNN
-F 3 "~" H 2800 6450 50  0001 C CNN
-	1    2800 6450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2900 6650 2900 6750
-$Comp
-L power:GND #PWR?
-U 1 1 5D8D6166
-P 2900 6750
-AR Path="/5D8D6166" Ref="#PWR?"  Part="1" 
-AR Path="/5D8CC6A3/5D8D6166" Ref="#PWR020"  Part="1" 
-F 0 "#PWR020" H 2900 6500 50  0001 C CNN
-F 1 "GND" H 2905 6577 50  0000 C CNN
-F 2 "" H 2900 6750 50  0001 C CNN
-F 3 "" H 2900 6750 50  0001 C CNN
-	1    2900 6750
-	1    0    0    -1  
-$EndComp
 Text HLabel 7150 4150 2    50   Input ~ 0
 tx_lcd
 Text HLabel 7150 4050 2    50   Input ~ 0
