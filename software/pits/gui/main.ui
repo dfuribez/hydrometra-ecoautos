@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>923</width>
+    <width>751</width>
     <height>503</height>
    </rect>
   </property>
@@ -103,7 +103,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
-        <widget class="QLCDNumber" name="lcdNumber">
+        <widget class="QLCDNumber" name="qtlcdvelocidad">
          <property name="smallDecimalPoint">
           <bool>true</bool>
          </property>
@@ -114,7 +114,7 @@
           <enum>QLCDNumber::Dec</enum>
          </property>
          <property name="value" stdset="0">
-          <double>107.780000000000001</double>
+          <double>108.000000000000000</double>
          </property>
          <property name="intValue" stdset="0">
           <number>108</number>
