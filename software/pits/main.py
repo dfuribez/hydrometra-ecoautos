@@ -34,6 +34,20 @@ class MainGui(QMainWindow, gui_class):
         self.tserial = SerialThread()
         self.tserial.signal.connect(self.serial_recibido)
         self.tserial.start()
+        self.vuelta = 0
+
+        self.qtsumar.clicked.connect(self.sumar_vuelta)
+        self.qtreset.clicked.connect(self.reset_vuelta)
+    
+    def sumar_vuelta(self):
+        self.vuelta += 1
+        self.qtvueltas.setText(str(self.vuelta))
+
+    def reset_vuelta(self):
+        self.vuelta = 0
+        self.qtvueltas.setText("0")
+
+
     
     def serial_recibido(self, mensaje):
         print(mensaje)

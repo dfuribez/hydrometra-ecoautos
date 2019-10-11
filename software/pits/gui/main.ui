@@ -136,6 +136,20 @@
        <item row="1" column="0">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
+          <widget class="QPushButton" name="qtsumar">
+           <property name="text">
+            <string>Sumar vuelta</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="qtreset">
+           <property name="text">
+            <string>Resetear vuelta</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <spacer name="horizontalSpacer">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -202,7 +216,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="qtvueltas">
          <property name="text">
           <string>3</string>
          </property>
