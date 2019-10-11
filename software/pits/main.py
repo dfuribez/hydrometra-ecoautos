@@ -36,6 +36,14 @@ class MainGui(QMainWindow, gui_class):
         self.tserial.start()
         self.vuelta = 0
 
+        self.datos = {
+            "velocidad:" [],
+            "corriente": [],
+            "vuelta": [],
+            "tiempo_vida": []
+        }
+
+
         self.qtsumar.clicked.connect(self.sumar_vuelta)
         self.qtreset.clicked.connect(self.reset_vuelta)
     
@@ -47,11 +55,24 @@ class MainGui(QMainWindow, gui_class):
         self.vuelta = 0
         self.qtvueltas.setText("0")
 
-
-    
     def serial_recibido(self, mensaje):
         print(mensaje)
         self.qtlcdvelocidad.display(int(mensaje))
+    
+    def guardar(self, ruta):
+        
+        buffer = "{}, {}, {}, {}\n"
+        with open(ruta, "w") as archivo:
+            for fila in range(len(self.datos["velocidad"])):
+                archivo.write(
+                    buffer.format(
+                        self.datos["velocidad"][fila],
+                        self.datos["corriente"][fila],
+                        self.datos["vuelta"][fila],
+                        self.datos["tiempo_vida"][fila]
+                    )
+                )
+
 
 
 
